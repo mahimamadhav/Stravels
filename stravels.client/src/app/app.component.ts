@@ -1,38 +1,16 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
-interface WeatherForecast {
-  date: string;
-  temperatureC: number;
-  temperatureF: number;
-  summary: string;
-}
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  standalone: false,
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [RouterModule],
+  templateUrl: './app.component.html'
+
 })
-export class AppComponent implements OnInit {
-  public forecasts: WeatherForecast[] = [];
-
-  constructor(private http: HttpClient) {}
-
-  ngOnInit() {
-    this.getForecasts();
+export class AppComponent {
+  onClick() {
+    throw new Error('Method not implemented.');
   }
-
-  getForecasts() {
-    this.http.get<WeatherForecast[]>('/weatherforecast').subscribe(
-      (result) => {
-        this.forecasts = result;
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
-  }
-
-  title = 'stravels.client';
 }
