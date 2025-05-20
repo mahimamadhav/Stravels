@@ -1,24 +1,130 @@
-﻿<h1 id="tableLabel">Weather forecast</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Srinivasa Road Transport</title>
+  <style>
+    body {
+      padding-top: 20px;
+      padding-left: 150px;
+      padding-right: 150px;
+    }
 
-<p>This component demonstrates fetching data from the server.</p>
+    .header {
+      display: flex;
+      gap: 26px;
+      align-items: center;
+    }
 
-<p *ngIf="!forecasts"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
 
-<table *ngIf="forecasts">
-    <thead>
-        <tr>
-            <th>Date</th>
-            <th>Temp. (C)</th>
-            <th>Temp. (F)</th>
-            <th>Summary</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let forecast of forecasts">
-            <td>{{ forecast.date }}</td>
-            <td>{{ forecast.temperatureC }}</td>
-            <td>{{ forecast.temperatureF }}</td>
-            <td>{{ forecast.summary }}</td>
-        </tr>
-    </tbody>
-</table>
+      .header-left img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+      }
+
+      .header-left h1 {
+        color: #e60000;
+      }
+
+    .header-right button {
+      width: 100px;
+      right: 100px;
+      gap: 10px;
+      padding: 8px 16px;
+      border: 2px solid #e60000;
+      border-radius: 10px;
+      background-color: white;
+      color: #e60000;
+    }
+
+    .header-right .login {
+      background-color: #e60000;
+      color: white;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+
+    .contact {
+      margin-top: 30px;
+      position: relative;
+      top: 100px;
+      bottom: 0px;
+      left: 0px;
+    }
+
+      .contact strong {
+        display: block;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+      }
+
+    .social-icons {
+      display: flex;
+      gap: 30px;
+      position: absolute;
+      bottom: 220px;
+      right: 30px;
+      padding-right: 150px;
+    }
+
+      .social-icons i {
+        font-size: 1.5rem;
+      }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-left">
+      <img src="assets/images/TP LOGO.png" width="20px" height="20px" alt="Logo">0sp
+      <h1>SRINIVASA ROAD TRANSPORT PRIVATE LIMITED</h1>
+    </div>
+    <div class="header-right">
+      <button (click)="onClick()">Sign Up</button>
+      <button class="login">Login</button>
+    </div>
+  </div>
+  <br><br>
+  <h2 align="center">Reliable, Safe and Affordable</h2>
+  <br>
+  <p align="center">
+    Welcome to Srinivasa Travels – your trusted partner in transport <br>services.
+    Book a ride that’s safe, reliable, and within your budget.
+  </p>
+
+  <div class="contact">
+    <h4>Contact Info</h4>
+    <p>Email:<a href="info@srinivasatravels.com">info&#64;srinivasatravels.com</a></p>
+    <p>Phone: +91-XXXXXXXXXX</p>
+  </div>
+
+  <div class="social-icons">
+    <a href="https://www.facebook.com">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="https://www.twitter.com">
+      <i class="fab fa-twitter"></i>
+    </a>
+
+    <a href="https://www.instagram.com">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</body>
+</html>
